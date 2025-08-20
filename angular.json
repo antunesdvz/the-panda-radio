@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "spotifeio": {
+    "thepandaradio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -67,13 +67,18 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "host": "127.0.0.1",
+            "port": 4200
+          },
+
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "spotifeio:build:production"
+              "buildTarget": "thepandaradio:build:production"
             },
             "development": {
-              "buildTarget": "spotifeio:build:development"
+              "buildTarget": "thepandaradio:build:development"
             }
           },
           "defaultConfiguration": "development"

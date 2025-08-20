@@ -11,5 +11,7 @@ export class PandaRadioService {
   async obterUrlLogin(): Promise<string> {
 
     const authPoint = `${ThePandaConfiguration.authEndpoint}?`;
+    const clientId = `client_id=${ThePandaConfiguration.clientId}&`;
+    const urlRedirect = `redirect_uri=${ThePandaConfiguration.redirectUrl}&`;
   }
 }

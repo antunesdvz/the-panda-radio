@@ -21,10 +21,13 @@ export class PandaRadioService {
     return `${authPoint}${clientId}${urlRedirect}${scopes}${codeChallengeMethod}${codeChallengeParam}${responseType}`;
   }
 
-  async gerarCodigoAleatorio(): Promise<any> {
+  async gerarCodigoAleatorio(p0: number): Promise<any> {
     const codigoVerificador = this.gerarCodigoAleatorio(128);
     const codchallenge = await this.gerarHash(codigoVerificador);
 
     return codchallenge;
+  }
+  gerarHash(codigoVerificador: Promise<any>) {
+    throw new Error("Method not implemented.");
   }
 }
